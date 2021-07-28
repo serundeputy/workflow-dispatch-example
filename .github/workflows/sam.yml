@@ -1,4 +1,4 @@
-name: Build a SAM
+name: 'Build a SAM'
 on:
   workflow_dispatch:
     inputs:
