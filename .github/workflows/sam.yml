@@ -1,6 +1,7 @@
 name: Workflow Dispatch Example
 on:
   workflow_dispatch:
+    types: do-something
     inputs:
       name:
         description: 'Person to greet'
