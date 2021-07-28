@@ -1,5 +1,4 @@
 name: Workflow Dispatch Example
-workflow_id: bigtime
 on:
   workflow_dispatch:
     inputs:
