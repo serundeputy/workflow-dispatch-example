@@ -10,4 +10,4 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: curl -H "Authorization: token ${{ secrets.PAT }}" -d '{"name":${{ github.event.inputs.name }},"private":"true"}' https://api.github.com/orgs/serundeputy/repos
+      - run: curl -H 'Authorization: token ${{ secrets.PAT }}' -d '{"name":${{ github.event.inputs.name }},"private":"true"}' https://api.github.com/orgs/serundeputy/repos
