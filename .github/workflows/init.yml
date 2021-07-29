@@ -1,0 +1,13 @@
+name: 'Create new GitHub Repo from a template'
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'The name for the new GitHub repository.'
+        required: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -H "Authorization: token ${{ secrets.PAT }}" -d '{"name":${{ github.event.inputs.name }}}' https://api.github.com/orgs/serundeputy/repos
